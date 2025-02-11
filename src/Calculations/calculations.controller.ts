@@ -17,9 +17,9 @@ export class CalculationController {
 
   @Post('expression')
   async addExpression(
-    @Body() body: { expression: string, result: number, date: string }
+    @Body() body: { expression: string, result: number }
 ) {
-    return this.calculationService.addExpression(body.expression, body.result, body.date)
+    return this.calculationService.addExpression(body.expression, body.result)
   }
 
 }

@@ -26,12 +26,11 @@ export class CalculationService {
 
     }
 
-    async addExpression(expression: string, result: number, date: string) {
+    async addExpression(expression: string, result: number) {
 
         const expressions = this.calcRepo.create({
             expression,
-            result,
-            date
+            result
         })
 
         if (!expressions) {
